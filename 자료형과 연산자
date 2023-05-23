@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>3의 배수 찾기</title>
+</head>
+<body>
+	<h2>3의 배수 찾기</h2>
+
+	<script>
+		let i;
+		let userNumber = parseInt(prompt("몇 까지 3의 배수를 찾을까요?", "100"));//let이 변하는수, parseint는 문자형을 int형으로 바꾸는 것, prompt는 알림창이 떠서 입력하는 것
+		let count = 1;//세는 걸 0부터 시작한다
+
+		
+		
+
+		for (i = 1; i <= userNumber; i++) {
+			if (i % 3 === 0) {
+				count++;
+				document.write(i + ', ');
+			}
+		}
+
+		document.write("<br>");
+		document.write("<p>" + userNumber + "까지 3의 배수의 개수: " + count + "</p>");
+	</script>
+</body>
+</html>
