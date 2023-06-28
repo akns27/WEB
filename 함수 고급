@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+  const hi1 = function(){
+    return "안녕하세요?";
+  }
+
+  const hi2 = () => "안녕하세요?";
+
+  const hi3 = () => "안녕하세요?"; 
+
+  console.log(hi1()); 
+  console.log(hi2());
+  console.log(hi3());
+
+  let sum1 = function(a, b){
+    return a + b;
+  }
+
+  const sum2 = (a, b) => a + b; 
+
+  const sum3 = (a, b) => a + b;
+
+  console.log(sum1(2, 3)); 
+  console.log(sum2(2, 3));
+  console.log(sum3(2, 3));
+
+  const f1 = (...etc) => {
+    console.log(etc);
+  }
+
+  f1(); 
+  f1(1);
+  f1(1, 2);
+  f1(1, 2, 3);
+  f1(1, 2, 3, ...[4, 5]);
+
+  const f2 = (a, b, ...etc) => {
+    console.log(a, b, etc);
+  }
+
+  f2();
+  f2(1);
+  f2(1, 2);
+  f2(1, 2, 3);
+  f2(1, 2, 3, 4);
+
+  const f3 = function(a, b, c){
+    console.log(a, b, c);
+  }
+  const a = [1, 2, 3];
+
+  f3(...a);
+  </script>
+</body>
+</html>
